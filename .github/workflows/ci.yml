@@ -1,12 +1,6 @@
-# ci.yml
-# Author: Vikash Kumar
-# GitHub Actions Workflow to run train.py and test Docker
-
-name: MLOps CI Pipeline
-
-on: [push]
-
-jobs:
+# fix the path as above# ci.yml Author: Vikash Kumar GitHub Actions Workflow to run train.py and test Docker then save using Ctrl + X → Y → Enter
+name: MLOps CI Pipeline git add .github/workflows/ci.yml on: [push] git commit -m "Fix CI: correct path to src/train.py" jobs:
+git push origin main
   build-and-test:
     runs-on: ubuntu-latest
 
@@ -25,7 +19,7 @@ jobs:
 
       - name: Run model training
         run: |
-          run: python train.py
+          python src/train.py
 
       - name: Build Docker image
         run: |
