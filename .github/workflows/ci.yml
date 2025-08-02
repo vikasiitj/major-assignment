@@ -25,7 +25,7 @@ jobs:
 
       - name: Run model training
         run: |
-          python src/train.py
+          run: python train.py
 
       - name: Build Docker image
         run: |
