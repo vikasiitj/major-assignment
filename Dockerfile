@@ -1,21 +1,16 @@
-# Dockerfile
 # Author: Vikash Kumar
 # Purpose: Container to run predict.py inside an isolated environment
 
-FROM python:3.10
+FROM python:3.10-slim
 
 WORKDIR /app
 
-# Copy all source files
-COPY src/ ./src/
-
-# Set working directory inside container
-WORKDIR /app/src
-
-# Install dependencies
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-# Run prediction script
-CMD ["python", "predict.py"]
+COPY src/ /app/src/
+COPY src/model.joblib /app/src/model.joblib
+COPY src/quant_params.joblib /app/src/quant_params.joblib
+
+CMD ["python", "src/predict.py"]
 
