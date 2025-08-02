@@ -1,4 +1,3 @@
-
 This repository contains my solution for the MLOps major exam assignment. It demonstrates an end-to-end ML workflow using Linear Regression, including training, quantization, Docker setup, CI pipeline, and testing.
 
 ---
@@ -15,20 +14,23 @@ This repository contains my solution for the MLOps major exam assignment. It dem
 ##  Folder Structure
 
 # MLOps Major Assignment\nThis repository contains the end-to-end MLOps workflow for training, testing, quantizing, and deploying a linear regression model.
-├── .github/
-│ └── workflows/
-│ └── mlops.yml # CI workflow
-├── src/
-│ ├── train.py # Training script
-│ ├── test_train.py # Unit test for training
-│ ├── predict.py # Prediction using trained model
-│ ├── quantize.py # Manual quantization
-│ ├── model.joblib # Trained model
-│ ├── quant_params.joblib # Quantized weights
-│ └── unquant_params.joblib # Original weights
-├── Dockerfile # Docker setup
-├── requirements.txt # Python dependencies
-└── README.md # This file
+Folder Structure:
+
+- .github/
+  - workflows/
+    - mlops.yml          # CI workflow
+- src/
+  - train.py             # Training script
+  - test_train.py        # Unit test for training
+  - predict.py           # Prediction using trained model
+  - quantize.py          # Manual quantization
+  - model.joblib         # Trained model
+  - quant_params.joblib  # Quantized weights
+  - unquant_params.joblib # Original weights
+- Dockerfile             # Docker setup
+- requirements.txt       # Python dependencies
+- README.md              # This file
+
 
 ## Learnings
 This assignment gave hands-on practice with:
