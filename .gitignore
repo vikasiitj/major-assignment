@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.joblib
+*.pth
+.ipynb_checkpoints/
+*.log
+*.pyc
+.env
+.idea/
